@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Singles | Mox Factory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="singles.html" class="active">Singles</a></li>
+        <li><a href="selados.html">Selados</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="index.html#redes">Redes</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <h1>Singles</h1>
+      <p>Pesquise cartas, monte seu pedido e envie direto no WhatsApp.</p>
+    </div>
+  </header>
+
+  <section class="page-section singles-page">
+    <div class="container singles-wrapper">
+
+      <main class="singles-content">
+
+        <div class="busca-box">
+          <input
+            id="busca"
+            type="text"
+            placeholder="Buscar carta..."
+            autocomplete="off"
+          >
+          <div id="sugestoes" class="sugestoes"></div>
+        </div>
+
+        <div class="topo-estoque">
+          <div>
+            <h2>Cartas em destaque</h2>
+            <p class="section-subtitle">As 4 cartas mais valiosas da coleção.</p>
+          </div>
+        </div>
+
+        <div id="top-cartas" class="grid-cartas destaque-grid"></div>
+
+        <div class="topo-estoque estoque-topo">
+          <div>
+            <h2>Estoque</h2>
+            <p class="section-subtitle">Veja todas as cartas disponíveis.</p>
+          </div>
+          <div id="resultado-info" class="resultado-info"></div>
+        </div>
+
+        <div id="grid-cartas" class="grid-cartas"></div>
+      </main>
+
+      <aside class="pedido-box pedido-lateral">
+        <div class="pedido-header">
+          <div>
+            <h3>Pedido</h3>
+            <p class="pedido-subtitulo">As cartas escolhidas vão aparecendo aqui.</p>
+          </div>
+          <button id="limpar-pedido" class="btn secondary-btn" type="button">
+            Limpar
+          </button>
+        </div>
+
+        <div id="pedido-vazio" class="pedido-vazio">
+          Nenhuma carta adicionada ainda.
+        </div>
+
+        <ul id="pedido" class="pedido-lista"></ul>
+
+        <div class="pedido-resumo">
+          <div>
+            <strong>Total estimado:</strong>
+            <span id="pedido-total">R$ 0,00</span>
+          </div>
+          <button id="btn-whatsapp" onclick="enviarPedido()" class="btn primary" type="button">
+            Enviar no WhatsApp
+          </button>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Mox Factory — Magic: The Gathering
+  </footer>
+
+  <script src="js/estoque.js"></script>
+</body>
+</html>
